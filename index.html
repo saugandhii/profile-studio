@@ -1,60 +1,299 @@
-<p align="center">
-  <a href="https://github.com/saugandhii">
-    <img src="https://capsule-render.vercel.app/api?type=transparent&fontColor=2ea043&fontSize=54&height=90&width=730&text=Hello!%20I'm%20Saugandhi" alt="Hello! I&#39;m Saugandhi" />
-  </a>
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>✨ Profile Studio — Whimsical Edition</title>
+  
+  <!-- Fonts & Libraries -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Caveat&weight=600&size=26&pause=1000&color=f778ba&center=true&vCenter=true&width=760&height=44&lines=I%20am%20an%20AI%20safety%20and%20Computer%20Vision%20enthusiast" alt="Typing headlines" />
-</p>
+  <style>
+    :root {
+      --bg-dark: #0b0d19;
+      --card-bg: rgba(23, 27, 48, 0.75);
+      --accent-pink: #ff76ac;
+      --accent-purple: #a855f7;
+      --accent-cyan: #38bdf8;
+      --text-main: #f8fafc;
+      --text-sub: #94a3b8;
+    }
 
-### 🚀 About Me
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-🔭 &nbsp;I'm currently working on **Computer Vision**  
-🌱 &nbsp;I'm currently learning **AI Safety**
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+      position: relative;
+    }
 
-### 🛠️ Tech Stack
+    /* Floating Animated Stars Canvas */
+    #bg-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      pointer-events: none;
+    }
 
-<p align="left">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white" alt="R" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="SQL" />
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" />
-  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow" />
-  <img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="pandas" />
-  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" />
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
-  <img src="https://img.shields.io/badge/Google%20Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Google Cloud" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
-  <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
-  <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=vscodium&logoColor=white" alt="VS Code" />
-</p>
+    header {
+      margin-top: 2rem;
+      text-align: center;
+      z-index: 2;
+    }
 
-### 🔗 Connect With Me
+    header h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.8rem;
+      background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple), var(--accent-cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
 
-<p align="left">
-  <a href="https://linkedin.com/in/www.linkedin.com/in/saugandhi"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="mailto:saugandhi@nyshadham.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-</p>
+    header p {
+      color: var(--text-sub);
+      font-size: 1.1rem;
+    }
 
-### 📊 GitHub Stats
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 2rem auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      z-index: 2;
+    }
 
-<p align="center">
-  <img height="165" src="https://github-readme-stats-five-sigma-99.vercel.app/api?username=saugandhii&show_icons=true&theme=tokyonight&title_color=2ea043&icon_color=2ea043&hide_border=true&bg_color=00000000&count_private=true" alt="stats" />
-</p>
+    @media (max-width: 768px) {
+      .container { grid-template-columns: 1fr; }
+    }
 
-### 💭 Dev Quote
+    .glass-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
 
-<p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Dev quote" />
-</p>
+    .glass-card:hover {
+      border-color: rgba(168, 85, 247, 0.4);
+    }
 
----
-<p align="center"><i>⭐️ From <a href="https://github.com/saugandhii">saugandhii</a></i></p>
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--text-sub);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px 16px;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      color: #fff;
+      font-size: 1rem;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: var(--accent-pink);
+      box-shadow: 0 0 15px rgba(255, 118, 172, 0.2);
+    }
+
+    /* Live Preview Section */
+    .preview-box {
+      border: 2px dashed rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 1.5rem;
+      background: rgba(0,0,0,0.2);
+      min-height: 200px;
+    }
+
+    .preview-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.6rem;
+      color: var(--accent-cyan);
+    }
+
+    .preview-tagline {
+      color: var(--accent-pink);
+      font-weight: 600;
+      margin: 0.5rem 0 1rem;
+    }
+
+    .preview-bio {
+      color: var(--text-sub);
+      line-height: 1.6;
+    }
+
+    /* Sparkle Button */
+    .magic-btn {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple));
+      color: white;
+      font-weight: 700;
+      font-size: 1.05rem;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(255, 118, 172, 0.3);
+      transition: all 0.2s ease;
+      margin-top: 1rem;
+    }
+
+    .magic-btn:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 12px 30px rgba(168, 85, 247, 0.5);
+    }
+
+    /* Custom Cursor Sparkle */
+    #cursor-follower {
+      position: fixed;
+      pointer-events: none;
+      font-size: 20px;
+      z-index: 9999;
+      transition: transform 0.08s ease-out;
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="bg-canvas"></canvas>
+  <div id="cursor-follower">🔮</div>
+
+  <header>
+    <h1>✨ Profile Studio</h1>
+    <p>Craft your whimsical GitHub bio with style</p>
+  </header>
+
+  <div class="container">
+    <!-- Controls -->
+    <div class="glass-card">
+      <h2 style="margin-bottom: 1.2rem; font-family: 'Space Grotesk';">Identity Builder</h2>
+
+      <div class="form-group">
+        <label>YOUR NAME / HEADER</label>
+        <input type="text" id="input-name" value="Saugandhii" oninput="updatePreview()" />
+      </div>
+
+      <div class="form-group">
+        <label>TAGLINE</label>
+        <input type="text" id="input-tagline" value="✨ Turning caffeine into creative code" oninput="updatePreview()" />
+      </div>
+
+      <div class="form-group">
+        <label>ABOUT ME BIO</label>
+        <textarea id="input-bio" rows="3" oninput="updatePreview()">Exploring full-stack magic, UI design, and open-source contributions.</textarea>
+      </div>
+
+      <button class="magic-btn" onclick="copyMarkdown()">🪄 Copy Markdown & Party!</button>
+    </div>
+
+    <!-- Live Preview -->
+    <div class="glass-card">
+      <h2 style="margin-bottom: 1.2rem; font-family: 'Space Grotesk';">Live Preview</h2>
+      <div class="preview-box">
+        <h3 id="prev-name" class="preview-title">Saugandhii</h3>
+        <p id="prev-tagline" class="preview-tagline">✨ Turning caffeine into creative code</p>
+        <p id="prev-bio" class="preview-bio">Exploring full-stack magic, UI design, and open-source contributions.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Live update preview
+    function updatePreview() {
+      document.getElementById('prev-name').innerText = document.getElementById('input-name').value || 'Your Name';
+      document.getElementById('prev-tagline').innerText = document.getElementById('input-tagline').value || 'Your Tagline';
+      document.getElementById('prev-bio').innerText = document.getElementById('input-bio').value || 'Your Bio...';
+    }
+
+    // Copy action with Confetti
+    function copyMarkdown() {
+      const name = document.getElementById('input-name').value;
+      const tagline = document.getElementById('input-tagline').value;
+      const bio = document.getElementById('input-bio').value;
+
+      const markdown = `# Hi there, I'm ${name} 👋\n\n### ${tagline}\n\n${bio}`;
+      navigator.clipboard.writeText(markdown);
+
+      confetti({
+        particleCount: 150,
+        spread: 90,
+        origin: { y: 0.6 }
+      });
+
+      alert('✨ Copied whimsical Markdown to clipboard!');
+    }
+
+    // Cursor Follower
+    window.addEventListener('mousemove', (e) => {
+      const follower = document.getElementById('cursor-follower');
+      follower.style.left = `${e.clientX - 10}px`;
+      follower.style.top = `${e.clientY - 10}px`;
+    });
+
+    // Starry Particles Background Canvas
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    let stars = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    for (let i = 0; i < 70; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 2,
+        alpha: Math.random(),
+        speed: Math.random() * 0.02 + 0.005
+      });
+    }
+
+    function animateBg() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      stars.forEach(s => {
+        s.alpha += s.speed;
+        if (s.alpha > 1 || s.alpha < 0) s.speed = -s.speed;
+        ctx.fillStyle = `rgba(255, 255, 255, ${Math.abs(s.alpha)})`;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      requestAnimationFrame(animateBg);
+    }
+    animateBg();
+  </script>
+</body>
+</html>
